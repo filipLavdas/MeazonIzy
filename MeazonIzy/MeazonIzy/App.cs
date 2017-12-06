@@ -17,11 +17,6 @@ namespace MeazonIzy
     {
         public static string USERTOKEN;
         
-        
-
-
-
-
         public App()
         {
 
