@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeazonIzy.Views.DevicesPage"
+             xmlns:local="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy">
+
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="99*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Purple"></Grid>
+    <Grid Grid.Row="1" Grid.Column="0">
+  
+
+    <Image Source="{local:ImageResource MeazonIzy.Resources.shattered.png}"  Aspect="Fill"  ></Image>
+<StackLayout Padding="0,10,0,0">
+  <ActivityIndicator x:Name="Indicator"
+                                  VerticalOptions="CenterAndExpand"
+                           
+                      ></ActivityIndicator>
+  
+    <ListView x:Name="DevListView" HasUnevenRows="True"
+              ItemTapped="DevListView_OnItemTapped"
+              >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout  >
+                <Grid BackgroundColor="Silver" Margin="9,9,9,9"  >
+
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+
+                  </Grid.RowDefinitions>
+
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                  </Grid.ColumnDefinitions>
+
+
+                  <Label  Text="{Binding Name}"  TextColor="Black" FontSize="30"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+
+                  <Switch  Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" 
+                           VerticalOptions="CenterAndExpand" 
+                         
+                           IsToggled="{Binding MyPlugState.IsOn}" 
+                           IsEnabled="{Binding MyPlugState.IsOnline}" 
+                           Toggled="Switch_OnToggled" 
+                           ></Switch>
+
+
+                  <StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                    <Label Text="S/N:" TextColor="Black" Opacity="0.5" FontSize="20" > </Label>
+                    <Label Text="{Binding SerialNumber}"  TextColor="Lime" VerticalOptions="Start" Opacity="0.5" FontSize="20" ></Label>
+
+                  </StackLayout>
+                </Grid>
+
+
+
+              </StackLayout>
+
+            </ViewCell.View>
+          </ViewCell>
+
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+
+</StackLayout>
+  </Grid>
+    </Grid>
+</ContentPage>

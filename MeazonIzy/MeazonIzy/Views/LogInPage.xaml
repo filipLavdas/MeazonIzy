@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             x:Class="MeazonIzy.Views.LogInPage">
+
+  <Grid>
+
+    <Image Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+           Aspect="Fill"
+         ></Image>
+   
+      <Grid Padding="0,15,0,0" x:Name="MainGrid">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"></ColumnDefinition></Grid.ColumnDefinitions>
+     
+      <ActivityIndicator Grid.Row="0" Grid.Column="0" 
+        x:Name="Indicator"  Scale="2"></ActivityIndicator>
+      <WebView x:Name="LogInWebView" Grid.Row="2" Grid.Column="0" 
+              ></WebView>
+              
+      <StackLayout x:Name="ButtonsLayout" Grid.Row="1" Grid.Column="0"
+                  
+                   Padding="10,25,10,0">
+        <Grid RowSpacing="10">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+
+          <Button x:Name="GoogleButton" Grid.Row="0" Grid.Column="0"
+                  Text="Login With Google"
+                  FontSize="15"
+                  BackgroundColor="Green" Clicked="GoogleButton_OnClicked"></Button>
+          <Button x:Name="FbButton" Grid.Row="1" Grid.Column="0"
+                  Text="Login With Facebook" FontSize="15" BackgroundColor="Blue" Clicked="FbButton_OnClicked"></Button>
+          <Button x:Name="MeazonButton"  Grid.Row="2" Grid.Column="0"
+                  Text="Login With Meazon Izy AAD"
+                  FontSize="15" BackgroundColor="Olive" Clicked="MeazonButton_OnClicked"></Button>
+        </Grid>
+      </StackLayout>
+
+      </Grid>
+    
+  </Grid>
+</ContentPage>

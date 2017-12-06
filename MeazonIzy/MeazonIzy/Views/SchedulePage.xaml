@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             xmlns:i18n="clr-namespace:MeazonIzy;assembly=MeazonIzy"
+             x:Class="MeazonIzy.Views.SchedulePage">
+
+  <ContentPage.ToolbarItems >
+
+    <ToolbarItem Text="Add"
+                 IsDestructive="True"
+              Clicked="TheToolbarAdd_OnClicked"
+                 Order="Primary"
+                 
+                 x:Name="TheToolbarAdd"></ToolbarItem>
+
+
+  </ContentPage.ToolbarItems>
+  
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="99*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Blue"></Grid>
+    <Grid Grid.Row="1" Grid.Column="0">
+
+      <Image Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+          Aspect="Fill"></Image>
+      <StackLayout>
+       
+     
+
+        <StackLayout  Padding="8,25,8,25">
+
+
+          <Grid BackgroundColor="Silver" Padding="15,15,15,15">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+              <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="{i18n:Translate DeviceLabel}"
+                   TextColor="Navy"
+                   FontSize="25"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalTextAlignment="Center"
+             ></Label>
+            <Label Grid.Row="0" Grid.Column="1"
+                 Text="{Binding Name}"
+                 TextColor="Black"
+                 FontSize="22"
+                 HorizontalOptions="EndAndExpand"
+                 VerticalTextAlignment="Center"></Label>
+          </Grid>
+        </StackLayout>
+
+
+        <ActivityIndicator x:Name="Indicator" VerticalOptions="CenterAndExpand"></ActivityIndicator>
+
+        <StackLayout x:Name="MainStack">
+
+        <Label
+               Text="{i18n:Translate TurnOnLabel}"
+               TextColor="Black"
+               FontSize="25"
+               HorizontalOptions="StartAndExpand"
+               VerticalOptions="CenterAndExpand"
+      >
+
+        </Label>
+
+        <ListView x:Name="SchedulesListView" HasUnevenRows="True" ItemTapped="SchedulesListView_OnItemTapped" >
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell >
+                
+                <StackLayout Padding="5,5,5,5">
+
+
+                  <Grid BackgroundColor="Silver"
+                   >
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="50*"></ColumnDefinition>
+                      <ColumnDefinition Width="50*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           Text="{i18n:Translate RepeatLabel}"
+                           TextColor="Navy"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                       
+                           FontSize="30"></Label>
+
+                    <Grid Grid.Column="1"
+                           Grid.Row="0"
+                        HorizontalOptions="CenterAndExpand">
+
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+
+                      </Grid.ColumnDefinitions>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                      </Grid.RowDefinitions>
+                      <Grid>
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="*"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                          <ColumnDefinition Width="Auto"/>
+                          <ColumnDefinition Width="Auto"></ColumnDefinition>
+                          <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="{Binding FromTime}"
+                               TextColor="Black"
+                               FontAttributes="Italic"
+                               FontSize="15"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                        
+                       > </Label>
+                        <Label Grid.Row="0" Grid.Column="1" TextColor="Black" Text="-"></Label>
+                        <Label Grid.Row="0" Grid.Column="2"
+                               Text="{Binding ToTime}"
+                       
+                               FontSize="15"
+                               TextColor="Black"
+                      ></Label>
+                      </Grid>
+                      <Label Text="{Binding Days}"
+                             FontSize="20"
+                             TextColor="Black"
+                            HorizontalOptions="EndAndExpand"
+                             Grid.Column="0"
+                     
+                             Grid.Row="1"
+                      
+                       > </Label>
+                    </Grid>
+
+
+
+
+
+
+
+
+
+                  </Grid>
+
+                </StackLayout>
+
+              </ViewCell>
+
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+
+
+      </StackLayout>
+      </StackLayout>
+      </Grid>
+    </Grid>
+  
+</ContentPage>

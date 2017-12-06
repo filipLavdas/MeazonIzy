@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             x:Class="MeazonIzy.Views.UsersPage"
+             xmlns:i18n="clr-namespace:MeazonIzy;assembly=MeazonIzy"
+            >
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="{i18n:Translate AddLabel}"
+                 IsDestructive="True"
+          Clicked="TheToolbarAdd_OnClicked"
+                 Order="Primary"
+                 x:Name="TheToolbarAdd"></ToolbarItem>
+
+  </ContentPage.ToolbarItems>
+
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="99*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Green"></Grid>
+    <Grid Grid.Row="1" Grid.Column="0">
+
+    <Image Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+           Aspect="Fill"
+         ></Image>
+    <StackLayout>
+
+      <ActivityIndicator x:Name="Indicator"
+                                VerticalOptions="CenterAndExpand"
+                      ></ActivityIndicator>
+
+      <StackLayout x:Name="MyLayout" >
+
+        <Label Text="{i18n:Translate CoAdminsLabel}"
+               FontSize="30"
+             FontAttributes="Bold"
+             TextColor="Green"
+             HorizontalOptions="CenterAndExpand"></Label>
+
+       
+        <ListView x:Name="CoAdminListView"  ItemTapped="CoAdminListView_OnItemTapped" >
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                
+
+                <StackLayout Padding="10,10,10,10" >
+
+                  <Grid BackgroundColor="Silver">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Label Text="{Binding Email}"  Grid.Column="0" Grid.Row="0"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           FontSize="25"
+                    
+                        TextColor="Black"></Label>
+
+                  </Grid>
+
+                </StackLayout>
+              </ViewCell>
+
+            </DataTemplate>
+          </ListView.ItemTemplate>
+
+        </ListView>
+
+      </StackLayout>
+      
+
+    </StackLayout>
+    
+  </Grid>
+    </Grid>
+</ContentPage>

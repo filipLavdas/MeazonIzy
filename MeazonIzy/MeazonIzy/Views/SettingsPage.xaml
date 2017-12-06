@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeazonIzy.Views.SettingsPage"
+             
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             xmlns:i18n="clr-namespace:MeazonIzy;assembly=MeazonIzy"
+             >
+
+
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="99*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Olive"></Grid>
+    <Grid Grid.Row="1" Grid.Column="0">
+
+
+      <Image Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+             Aspect="Fill"></Image>
+      <TableView Intent="Settings" HasUnevenRows="True" >
+        <TableRoot
+          Title="{i18n:Translate SettingsTitle}" >
+          <TableSection
+            Title="{i18n:Translate AccountTitle}" x:Name="AccSection" >
+
+            <ViewCell >
+
+
+              <Grid   >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate UserNameLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+           
+                       Grid.Row="0"
+              Grid.Column="0"></Label>
+
+                <Label x:Name="UserLabel" Text=""
+                       TextColor="Black"
+                       FontSize="22"
+                       Grid.Row="0"
+              Grid.Column="2"></Label>
+              </Grid>
+
+
+
+
+            </ViewCell>
+
+
+
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+
+            <ViewCell>
+              <Grid  >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="Email"
+                       FontSize="22"
+                       TextColor="Black"
+         
+                       Grid.Row="0"
+              Grid.Column="0"></Label>
+
+                <Label x:Name="EmailLabel" Text=""
+                       TextColor="Black"
+                     
+                       FontSize="22"
+                       Grid.Row="0"
+              Grid.Column="2"></Label>
+              </Grid>
+
+            </ViewCell>
+
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+
+
+            <ViewCell>
+              <Grid  >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate ProviderLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+          
+                       Grid.Row="0"
+              Grid.Column="0"></Label>
+
+                <Label x:Name="ProviderLabel" 
+                       TextColor="Black"
+                       FontSize="22"
+                       Grid.Row="0"
+              Grid.Column="2"></Label>
+              </Grid>
+
+            </ViewCell>
+
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+
+
+            <ViewCell>
+              <Grid  >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate DisconectLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+                       
+            
+                       Grid.Row="0"
+              Grid.Column="0"></Label>
+                <Grid.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="LogOut_OnTapped"></TapGestureRecognizer>
+                </Grid.GestureRecognizers>
+
+
+              </Grid>
+
+            </ViewCell>
+
+          </TableSection>
+          <TableSection Title="{i18n:Translate GeneralTitle}"  >
+            
+            
+                
+            
+
+  
+            <ViewCell   >
+              <Grid  >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate LanguageSettingsLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+
+                       Grid.Row="0"
+              Grid.Column="0"
+                       Grid.ColumnSpan="2"></Label>
+
+                <Label x:Name="LanguageLabel"
+                     
+                      Text="{i18n:Translate LanguageLabel}"
+                       HorizontalTextAlignment="End"
+                       TextColor="Black"
+                       FontSize="22"
+                       Grid.Row="0"
+              Grid.Column="2">
+
+                </Label>
+               </Grid>
+                </ViewCell>
+
+
+              
+
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+
+            <ViewCell  >
+              <Grid Opacity="0.5" >
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate SoundLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"></Label>
+
+                <Switch IsEnabled="False"
+                       HorizontalOptions="End"
+                       
+                       Grid.Row="0"
+                       Grid.Column="3">
+
+                </Switch>
+
+
+              </Grid>
+
+            </ViewCell>
+
+            <ViewCell Height="2">
+              <Grid BackgroundColor="Transparent"></Grid>
+            </ViewCell>
+
+
+            <ViewCell  >
+              <Grid  x:Name="StateGrid">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{i18n:Translate StateLabel}"
+                       FontSize="22"
+                       TextColor="Black"
+
+                        Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"></Label>
+
+                <Label
+                      x:Name="StateLabel"
+                     
+                        HorizontalOptions="End"
+                        FontSize="22"
+                        TextColor="Black"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2">
+
+                </Label>
+                <Grid.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+                </Grid.GestureRecognizers>
+
+              </Grid>
+
+            </ViewCell>
+
+            
+          </TableSection>
+
+
+
+        </TableRoot>
+
+      </TableView>
+
+
+
+    </Grid>
+  </Grid>
+</ContentPage>

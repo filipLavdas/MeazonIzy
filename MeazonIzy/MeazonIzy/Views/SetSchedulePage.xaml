@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             xmlns:i18n="clr-namespace:MeazonIzy;assembly=MeazonIzy"
+             x:Class="MeazonIzy.Views.SetSchedulePage">
+
+  <ContentPage Title="{i18n:Translate TimeTitle}" >
+    <Grid >
+      <Image
+       Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+       Aspect="Fill"></Image>
+
+      <StackLayout >
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Row="0" Grid.Column="0" x:Name="AllDayLabel"
+            Text="{i18n:Translate AllDayLabel}" FontSize="22" VerticalTextAlignment="Center"
+          TextColor="Navy"></Label>
+          <Switch x:Name="AllDaySwitch" Grid.Row="0" Grid.Column="1"
+                 Toggled="AllDaySwitch_OnToggled"></Switch>
+
+
+
+        </Grid>
+
+        <StackLayout x:Name="TimeStack">
+
+          <Label Text="{i18n:Translate FromTimeLabel}" FontSize="18" FontAttributes="Italic"
+                 TextColor="Black"
+                 HorizontalTextAlignment="Start"></Label>
+
+          <Slider x:Name="FromSlider"
+                   Minimum="0" Maximum="95"
+           ValueChanged="FromSlider_OnValueChanged">
+
+          </Slider>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label FontSize="25" Text="{i18n:Translate ValueLabel}" TextColor="Black"></Label>
+            <Label x:Name="FromTimeLabel"
+                   FontSize="25"
+                   TextColor="Black"
+               ></Label>
+          </StackLayout>
+          <Label Text="{i18n:Translate ToTimeLabel}" FontSize="18" FontAttributes="Italic"
+                 TextColor="Black"
+                 HorizontalTextAlignment="Start"></Label>
+
+          <Slider x:Name="ToSlider" Minimum="0" Maximum="96" ValueChanged="ToSlider_OnValueChanged"></Slider>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label FontSize="25" Text="{i18n:Translate ValueLabel}" TextColor="Black"></Label>
+            <Label x:Name="ToTimeLabel"
+                   FontSize="25"
+                   TextColor="Black"
+               ></Label>
+          </StackLayout>
+          <Label x:Name="TimeValidationLabel"
+            FontSize="35"
+            TextColor="Red"
+            Text="{i18n:Translate WrongTimeLabel}"
+          
+            HorizontalOptions="CenterAndExpand"
+            FontAttributes="Bold"></Label>
+        </StackLayout>
+
+
+
+      </StackLayout>
+
+
+
+
+    </Grid>
+
+
+  </ContentPage>
+
+
+  <!-- NEWNENWNENWNENENWNENQNENQNENWNENWNENWNENWNENWNENWNENWNENWNENWNENWNENWNENWNENWNEW !-->
+
+  <ContentPage Title="{i18n:Translate DaysTitle}" NavigationPage.HasBackButton="False"
+               NavigationPage.HasNavigationBar="False"
+                >
+    
+    
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="90*"></RowDefinition>
+        <RowDefinition Height="10*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Image
+       Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+       Aspect="Fill"
+       Grid.RowSpan="3"></Image>
+      <StackLayout Grid.Row="0" >
+        <Grid >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0" 
+            Text="All Week" TextColor="Blue"  x:Name="AllWeekLabel"
+                 FontSize="25" VerticalTextAlignment="Center"></Label>
+          
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="AllWeekSwitch" Toggled="AllWeekSwitch_OnToggled"></Switch>
+        </Grid>
+        <StackLayout x:Name="WeekLayout">
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate MondayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="MonSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate TuesdayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="TueSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate WednesdayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="WedSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate ThursdayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="ThuSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate FridayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="FriSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate SaturdayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="SatSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Label Grid.Column="0" Grid.Row="0"
+            Text="{i18n:Translate SundayLabel}" TextColor="Black"
+                 FontSize="20" VerticalTextAlignment="Center"></Label>
+          <Switch Grid.Column="1" Grid.Row="0" x:Name="SunSwitch"></Switch>
+        </Grid>
+        <Grid BackgroundColor="Silver" HeightRequest="1"></Grid>
+        </StackLayout>
+
+
+      </StackLayout>
+
+      <StackLayout Grid.Row="1" Orientation="Horizontal">
+        <Button
+             Text="{i18n:Translate SaveLabel}" BackgroundColor="Olive" TextColor="Black"
+                   FontSize="15" x:Name="SaveButton"
+                   Clicked="Save_OnClicked" BorderColor="Black"
+           HorizontalOptions="CenterAndExpand"></Button>
+        <Button
+          Text="{i18n:Translate CancelLabel}" BackgroundColor="Black" TextColor="Red"
+                BorderColor="Red" x:Name="CancelButton"
+                FontSize="15"
+                Clicked="Cancel_OnClicked"
+        HorizontalOptions="CenterAndExpand"></Button>
+
+      </StackLayout>
+
+    </Grid>
+
+    
+  </ContentPage>
+  
+</TabbedPage>

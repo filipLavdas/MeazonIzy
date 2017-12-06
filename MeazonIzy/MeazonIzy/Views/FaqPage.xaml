@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy"
+             x:Class="MeazonIzy.Views.FaqPage"
+             >
+
+  <ScrollView Orientation="Vertical"  >
+
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="99*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+
+
+      <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Maroon"></Grid>
+      <Grid Grid.Row="1" Grid.Column="0" >
+    
+
+      <Image Source="{resources:ImageResource MeazonIzy.Resources.shattered.png}"
+                  Aspect="Fill"
+            
+              
+    ></Image>
+
+      <!--<Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="3*"></RowDefinition>
+    </Grid.RowDefinitions>-->
+     
+
+      <Grid Padding="15,15,15,15" RowSpacing="4" >
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+          <RowDefinition Height="Auto"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+
+
+
+
+        <Grid  x:Name="Grid1"
+               Padding="5,5,5,5"
+               Grid.Row="0"
+               Grid.Column="0"
+                >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q1"
+                 Grid.Row="0" 
+                 Grid.Column="0"
+                 TextColor="Black"
+                 BackgroundColor="White"
+                 FontAttributes="Bold"
+                 FontSize="20" >
+
+
+
+          </Label>
+
+
+
+
+          <Label x:Name="A1"
+                 Grid.Row="0" Grid.Column="0"
+                Opacity="0"
+                 TextColor="Black"
+                 BackgroundColor="White"
+                       
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+
+        </Grid>
+
+
+
+
+        <Grid x:Name="Grid2" Padding="5,5,5,5"
+           Grid.Row="1" Grid.Column="0" >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q2"
+            Grid.Row="0" Grid.Column="0" 
+                 BackgroundColor="White"
+                 TextColor="Black" FontAttributes="Bold"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A2"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black" 
+                 Opacity="0"
+                      
+                 FontSize="20"
+                       />
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+
+
+
+
+        <Grid x:Name="Grid3" Padding="5,5,5,5"
+           Grid.Row="2" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q3" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" 
+                 BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20"
+              >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A3"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                        Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid4" Padding="5,5,5,5"
+                      Grid.Row="3" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q4" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A4"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                          Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid5" Padding="5,5,5,5"
+                         Grid.Row="4" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q5" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A5"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                        Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid6" Padding="5,5,5,5"
+                         Grid.Row="5" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q6" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A6"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                        Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid7" Padding="5,5,5,5"
+                         Grid.Row="6" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q7" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A7"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                          Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid8" Padding="5,5,5,5"
+                         Grid.Row="7" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q8" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A8"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                        Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid9" Padding="5,5,5,5"
+                         Grid.Row="8" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q9" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A9"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                          Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+        <Grid x:Name="Grid10" Padding="5,5,5,5"
+                         Grid.Row="9" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+          <Label x:Name="Q10" FontAttributes="Bold"
+            Grid.Row="0" Grid.Column="0" BackgroundColor="White"
+                 TextColor="Black"
+                 FontSize="20" >
+
+
+
+
+          </Label>
+
+
+          <Label x:Name="A10"
+            Grid.Row="0" Grid.Column="0"
+                 BackgroundColor="White"
+                 TextColor="Black"
+                         Opacity="0"
+                 FontSize="20"
+                       />
+
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+              NumberOfTapsRequired="1"
+          Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+          </Grid.GestureRecognizers>
+
+        </Grid>
+
+
+
+
+
+
+
+      </Grid>
+    </Grid>
+      </Grid>
+  </ScrollView>
+
+</ContentPage>

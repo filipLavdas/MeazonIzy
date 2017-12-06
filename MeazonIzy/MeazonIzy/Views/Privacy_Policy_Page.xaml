@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeazonIzy.Views.Privacy_Policy_Page"
+             xmlns:local="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy">
+  <ScrollView>
+    <Grid RowSpacing="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="99*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+
+
+      <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Maroon"></Grid>
+      <Grid Grid.Row="1" Grid.Column="0">
+  
+    <Image Source="{local:ImageResource MeazonIzy.Resources.shattered.png}"
+           Aspect="Fill"></Image>
+    
+    <Label x:Name="PrivacyLabel"
+          FontSize="20"
+           TextColor="Black"
+           BackgroundColor="Transparent"></Label>
+    
+    
+    
+  </Grid>
+      </Grid>
+  </ScrollView>
+</ContentPage>

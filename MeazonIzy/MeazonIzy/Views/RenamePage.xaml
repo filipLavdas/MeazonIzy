@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeazonIzy.Views.RenamePage"
+             xmlns:i18n="clr-namespace:MeazonIzy;assembly=MeazonIzy"
+             xmlns:local="clr-namespace:MeazonIzy.Resources;assembly=MeazonIzy">
+
+
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="99*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <Grid Grid.Row="0" Grid.Column="0"  BackgroundColor="Purple"></Grid>
+    <Grid Grid.Row="1" Grid.Column="0">
+
+    <Image Source="{local:ImageResource MeazonIzy.Resources.shattered.png}" Aspect="Fill"></Image>
+    <StackLayout >
+      <Entry x:Name="MyEntry"
+              FontSize="20"
+              VerticalOptions="CenterAndExpand"
+             Margin="5,5,5,5"
+             BackgroundColor="White"
+             TextColor="Black"></Entry>
+      <Grid  VerticalOptions="EndAndExpand">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SaveButton" Grid.Row="0" Grid.Column="0"
+                Text="{i18n:Translate SaveLabel}"
+                BackgroundColor="Olive"
+                Clicked="ButtonSave_OnClicked"
+                TextColor="White"
+                FontSize="15"
+               
+                HorizontalOptions="StartAndExpand">
+
+        </Button>
+        <Button  x:Name="CancelButton"
+                 Grid.Row="0" Grid.Column="1"
+                 Text="{i18n:Translate CancelLabel}"
+                BackgroundColor="Black"
+                Clicked="ButtonCancel_OnClicked"
+                TextColor="White"
+                FontSize="15"
+                
+                HorizontalOptions="EndAndExpand">
+
+        </Button>
+
+      </Grid>
+    </StackLayout>
+
+  </Grid>
+    </Grid>
+  
+  
+</ContentPage>
